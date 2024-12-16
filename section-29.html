@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Section 29</title>
+    <link rel="stylesheet" href="style-29.css">
+</head>
+<body>
+    <div id="kotakmusik">
+        <audio id="lagu" loop autoplay>
+            <source src="assets/music/Louis Island - Run Away with Me.mp3">
+        </audio>
+
+        <div id="ctrlmusik" onclick="putarMusik()">
+            <img  id ="imgmusik" src="assets/img/download.png">
+        </div>
+
+        <div id="section-1">
+
+        </div>
+    <div id="section-1" class="box-full bg-primary c-txt-primary">Quote</div>
+    <div id="section-2" class="box-full bg-secondary c-txt-secondary">Profile</div>
+    <div id="section-3" class="box-full bg-third c-txt-third">Acara</div>
+    <div id="section-4" class="box-full bg-dark c-txt-secondary">Gallery</div>
+    <div id="nav">
+        <ul>
+            <a href="#section-1"><li>Quote</li>
+            <a href="#section-2"><li>Profile</li>
+            <a href="#section-3"><li>Acara</li>
+            <a href="#section-4"><li>Gallery</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script>
+    function putarMusik(){
+        const lagu = document.querySelector("#lagu");
+        const imgmusik = document.querySelector("#imgmusik");
+        if(lagu.paused){
+            lagu.play();
+            imgmusik.src = "assets/img/download.png";
+        }else{
+            lagu.pause();
+            imgmusik.src = "assets/img/png-transparent-musical-note-musical-note-rectangle-monochrome-musical-notation-thumbnail";    
+        }
+    }
+
+</script>
